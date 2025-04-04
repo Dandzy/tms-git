@@ -194,24 +194,24 @@ book3.get_Ebook_info()
 print("\n# 5. Task ------")
 
 class Vehicle:
-    def __init__(self, color, weight, model, release_year):
+    def __init__(self, color, engine, model, release_year):
         self.color = color
-        self.weight = weight
+        self.engine = engine
         self.model = model
         self.year = release_year
 
-    def set_attributes(self, color, weight, model, release_year):
+    def set_attributes(self, color, engine, model, release_year):
         self.color = color
-        self.weight = weight
+        self.engine = engine
         self.model = model
         self.year = release_year
 
     def get_Car_info(self):
-        print(f"Vehicle {self.model} has {self.color} color, weight is {self.weight} kg and release date {self.year}")
+        print(f"Vehicle {self.model} has {self.color} color, engine is {self.engine} HP and release date {self.year}")
        
 class Truck(Vehicle):
-    def __init__(self, color, weight, model, release_year, type, price):
-        super().__init__(color, weight, model, release_year)
+    def __init__(self, color, engine, model, release_year, type, price):
+        super().__init__(color, engine, model, release_year)
         self.type = type
         self.price = price
     
@@ -220,11 +220,11 @@ class Truck(Vehicle):
         self.price = price
 
     def get_Truck_info(self):
-        print(f"{self.model} is vehicle of  {self.type} type, has {self.color} color, weight is {self.weight} kg, release date {self.year} and price {self.price}")
+        print(f"{self.model} is vehicle of  {self.type} type, has {self.color} color, engine is {self.engine} HP, release date {self.year} and price {self.price}")
 
 class Bus(Vehicle):
-    def __init__(self, color, weight, model , release_year, wheels, price):
-        super().__init__(color, weight, model , release_year)
+    def __init__(self, color, engine, model , release_year, wheels, price):
+        super().__init__(color, engine, model , release_year)
         self.wheels = wheels
         self.price = price
 
@@ -233,16 +233,16 @@ class Bus(Vehicle):
         self.price = price
 
     def get_Bus_info(self):
-        print(f"Bus model is {self.model}, has {self.color} color, weight is {self.weight} kg, number of wheels {self.wheels}, release date {self.year} and price {self.price}")
+        print(f"Bus model is {self.model}, has {self.color} color, engine is {self.engine} HP, number of wheels {self.wheels}, release date {self.year} and price {self.price}")
 
 # Создаем объект класса Vehicle
-car1 = Vehicle("red", 1440, "VW", 2016)
+car1 = Vehicle("red", 250, "VW", 2016)
 
 # Создаем объект класса Tuck
-car2 = Truck("white", 5000, "Volvo", 2024, "Truck", 5678)
+car2 = Truck("white", 900, "Volvo", 2024, "Truck", 5678)
 
 # Создаем объект класса Bus
-car3 = Bus("green", 10200, "Maz", 2023, 8, 45600)
+car3 = Bus("green", 1200 , "Maz", 2023, 8, 45600)
 
 # Выводим данные о наших объектах
 car1.get_Car_info()
@@ -250,7 +250,7 @@ car2.get_Truck_info()
 car3.get_Bus_info()
 print("\n")
 # Изменим некоторые аттрибуты всех объектов
-car1.set_attributes("black", 1800, "BMW", 2013)
+car1.set_attributes("black", 300, "BMW", 2013)
 car2.set_attributes("Heavy Truck", 8900)
 car3.set_attributes("10", 12200)
 
